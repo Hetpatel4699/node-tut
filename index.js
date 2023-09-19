@@ -94,13 +94,49 @@
 //     console.log("invalid input")
 // }
 
+                            // Display file list from folder
+// const fs = require('fs');
+// const path = require('path');
+// const dirPath = path.join(__dirname,'files');   
+// // console.log(dirPath)
+// // for(i=0;i<5;i++)
+// // {
+// //     fs.writeFileSync(dirPath+"/hello"+i+".txt","A simple text file")
+// //     fs.writeFileSync(`hello${i}.txt`,"A simple text file")
+// // }
+
+// fs.readdir(dirPath,(err,files)=>{
+//     // console.log(files)
+//     files.forEach((item)=>{
+//         console.log("file name is ", item)
+//     })
+// })
+
+
+//  Asynchronous Programming Language
 
 const fs = require('fs');
-const path = require('path');
-const dirPath = path.join(__dirname,'files');   
-// console.log(dirPath)
-for(i=0;i<5;i++)
-{
-    fs.writeFileSync(dirPath+"/hello"+i+".txt","A simple text file")
-    // fs.writeFileSync(`hello${i}.txt`,"A simple text file")
-}
+const path =require('path');
+const dirPath = path.join(__dirname, 'curd');
+const filePath = `${dirPath}/apple.txt`;
+
+        // write file
+// fs.writeFileSync(filePath,"this is an apple");
+
+        // read file
+// fs.readFile(filePath,'utf8',(err,item)=>{
+//     console.log(item)
+// })
+
+        // append file
+// fs.appendFile(filePath,'and file name is apple.txt',(err)=>{
+//     if(!err) console.log("file is updated")
+// })
+
+        // rename file
+// fs.rename(filePath,`${dirPath}/fruit.txt`,(err)=>{
+//     if(!err) console.log("file is updated")
+// })
+                
+        // delete file
+// fs.unlinkSync(`${dirPath}/fruit.txt`)
